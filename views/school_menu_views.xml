@@ -1,0 +1,33 @@
+<odoo>
+    <!-- Définition des actions -->
+    <record id="action_students" model="ir.actions.act_window">
+        <field name="name">Students</field>
+        <field name="res_model">school.student</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="action_courses" model="ir.actions.act_window">
+        <field name="name">Courses</field>
+        <field name="res_model">school.course</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="action_schedules" model="ir.actions.act_window">
+        <field name="name">Schedules</field>
+        <field name="res_model">school.schedule</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="action_grades" model="ir.actions.act_window">
+        <field name="name">Grades</field>
+        <field name="res_model">school.grade</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Définition des menus -->
+    <menuitem id="menu_school_root" name="School"/>
+    <menuitem id="menu_school_students" name="Students" parent="menu_school_root" action="action_students"/>
+    <menuitem id="menu_school_courses" name="Courses" parent="menu_school_root" action="action_courses"/>
+    <menuitem id="menu_school_schedules" name="Schedules" parent="menu_school_root" action="action_schedules"/>
+    <menuitem id="menu_school_grades" name="Grades" parent="menu_school_root" action="action_grades"/>
+</odoo>

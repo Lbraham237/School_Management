@@ -1,0 +1,41 @@
+<odoo>
+    <!-- Données pour les étudiants -->
+    <record id="student_1" model="school.student">
+        <field name="name">John Doe</field>
+        <field name="birthdate">2005-01-01</field>
+        <field name="gender">male</field>
+    </record>
+
+    <record id="student_2" model="school.student">
+        <field name="name">Jane Smith</field>
+        <field name="birthdate">2006-02-02</field>
+        <field name="gender">female</field>
+    </record>
+
+    <!-- Données pour les cours -->
+    <record id="course_1" model="school.course">
+        <field name="name">Mathematics</field>
+        <field name="description">Basic and advanced mathematics.</field>
+    </record>
+
+    <record id="course_2" model="school.course">
+        <field name="name">Physics</field>
+        <field name="description">Fundamentals of physics.</field>
+    </record>
+
+    <!-- Données pour les emplois du temps -->
+    <record id="schedule_1" model="school.schedule">
+        <field name="name">Math Class</field>
+        <field name="start_time">2023-10-01 09:00:00</field>
+        <field name="end_time">2023-10-01 10:00:00</field>
+        <field name="course_id" ref="course_1"/>
+        <field name="classroom">Room 101</field>
+    </record>
+
+    <!-- Données pour les notes -->
+    <record id="grade_1" model="school.grade">
+        <field name="student_id" ref="student_1"/>
+        <field name="course_id" ref="course_1"/>
+        <field name="grade">18.5</field>
+    </record>
+</odoo>
